@@ -8,7 +8,10 @@ Get the foundation right before building features on top of it. Not in productio
 - [ ] Remove `businessType` from the `data` JSON column; backfill `business_type` column
 - [ ] Drop `ProfessionalRole` enum; replace with `BusinessType` enum (values are the new Parental discriminators)
 - [ ] `status` (pending/approved/rejected) should only be set/read on Business profiles — add guard / scope at the model level
+- [ ] Add `commission_rate` column to business profiles (nullable integer cents; null = platform default of 15%)
 - [ ] Rename `studio_id` → `business_id` on `products` table and in all related code
+- [ ] Add `ProductVariant` model and migration (price, specs, lead_time, download_allowed, files)
+- [ ] Add `add_on` product type (STI subclass `Product\AddOn`); link to a parent floor plan variant
 - [ ] Update `RegisterBusinessProfile` Filament page to write to the new `business_type` column
 - [ ] Update `ProfessionalController` and `ShopController` to use updated model structure
 - [ ] Update Statamic Runway resource config if affected
@@ -19,25 +22,31 @@ Get the foundation right before building features on top of it. Not in productio
 
 The minimum needed for money to change hands.
 
-### Payments (Stripe)
-- [ ] Integrate Stripe (Laravel Cashier or direct Stripe SDK)
-- [ ] Product checkout flow: add to cart → checkout → Stripe payment → order created
-- [ ] Stripe webhook handling (payment succeeded, failed, refunded)
-- [ ] Payout/connect model for businesses (Stripe Connect or manual payout — decide)
+### Payments (Stripe Connect)
+- [ ] Integrate Stripe Connect; business onboarding flow (connect bank account, KYC)
+- [ ] Product checkout flow: select variant → checkout → Stripe payment with application fee → order created
+- [ ] Pre-authorization flow for lead-time orders (auth at purchase, capture on delivery)
+- [ ] Stripe webhook handling (payment succeeded, failed, captured, refunded)
+- [ ] Per-business commission rate applied from `commission_rate` profile field (default 15%)
 
 ### Orders
 - [ ] `Order` and `OrderItem` models + migrations
-- [ ] Order belongs to a Customer profile; references the purchased Product and the selling Business
-- [ ] Order status: pending → paid → fulfilled / refunded
+- [ ] Order belongs to a Customer profile; references the purchased ProductVariant and the selling Business
+- [ ] **Instant delivery order lifecycle:** Pending → Paid → Fulfilled / Refunded
+- [ ] **Lead-time order lifecycle:** Pending → Accepted → In Progress → Ready for Review → Delivered / Refunded
+- [ ] `Service` model + migration (title, description, lead_time, price or quoted flag, linked floor plan variant if applicable)
 
-### File Delivery
-- [ ] Floor plan file storage (S3 or compatible — store deliverable files per product)
-- [ ] Secure signed URL generation for purchased file downloads (time-limited)
-- [ ] Business can upload/replace deliverable files for their products
+### File Delivery — Viewer
+- [ ] Research and select open-source PDF viewer library with browser-level download prevention (right-click, DevTools)
+- [ ] Private S3 storage for deliverable files; files never served with public URLs
+- [ ] Server-side signed token generation for viewer sessions (raw URL never exposed to browser)
+- [ ] Per-variant download permission flag (`download_allowed`); signed PDF download URL if permitted
+- [ ] Business file upload UI (upload deliverable files per variant from app panel)
 
 ### Emails (transactional)
-- [ ] Purchase confirmation to customer (with download link)
+- [ ] Purchase confirmation to customer (with link to viewer in order history)
 - [ ] New order notification to business
+- [ ] Lead-time order: accepted / in-progress / ready-for-review / delivered notifications
 - [ ] Business application received confirmation
 - [ ] Business application approved/rejected notification
 
@@ -48,10 +57,13 @@ The minimum needed for money to change hands.
 Give businesses the tools to manage their presence and products.
 
 ### Product Management (Filament app panel, business tenant)
-- [ ] Floor plan listing page (business sees their own products)
-- [ ] Create / edit floor plan form (title, price, style, specs, teaser, images, deliverable file upload)
+- [ ] Floor plan listing page (business sees their own products and variants)
+- [ ] Create / edit floor plan form (title, style, specs, teaser, images)
+- [ ] Variant management: add/edit/remove variants (price, bedroom/bathroom/sqft specs, lead time, download permission, file upload)
+- [ ] Add-on product management: create cost-to-build reports, material lists linked to a variant
 - [ ] Publish / unpublish product
-- [ ] Orders received view (per product and overall)
+- [ ] Orders received view: instant delivery and lead-time orders with separate status flows
+- [ ] Lead-time order management: accept, mark in progress, mark ready for review, deliver
 
 ### Business Profile Management
 - [ ] Public business profile page (visible at `/professionals/{handle}`)
@@ -76,9 +88,20 @@ Give customers the tools to manage their build journey.
 - [ ] Project members: invite by email, set manager/viewer access
 - [ ] Project member email invite flow (accept invite → account creation if needed)
 
-### Order History
-- [ ] Customer order history page: purchased plans, download links, receipts
-- [ ] Re-download previously purchased files (authenticated signed URL)
+### Order History & Viewer
+- [ ] Customer order history page: purchased plans and services, receipts
+- [ ] In-browser floor plan viewer for purchased variants (PDF viewer, download-prevention enforced)
+- [ ] PDF download link in viewer if designer has enabled it for that variant
+- [ ] Purchase add-on products from order history (for plans already owned)
+- [ ] Lead-time order tracking (status progress visible to customer)
+
+### Teams & Connections
+- [ ] `Connection` model + migration (requester, recipient, type, status)
+- [ ] Connection types: build_team_member (customer→business), preferred_partner (business→business), co-buyer (customer→customer, mutual), team_member (business internal, mutual)
+- [ ] One-way connections created immediately; mutual connections require recipient acceptance
+- [ ] Customer build team UI: browse and add professionals to their team
+- [ ] Business preferred partners UI: endorse other businesses
+- [ ] Team member invitation flow for mutual connections (email invite + accept/decline)
 
 ---
 
@@ -145,12 +168,13 @@ Infrastructure and operational readiness.
 
 Things that are valuable but not needed for launch:
 
-- **Plan customization tools** — Let customers request modifications to floor plans (requires a design workflow)
+- **CAD file viewer** — Browser viewer for DWG/DXF files (significantly harder than PDF; research open-source options)
+- **Quoted service pricing** — Services where the designer provides a custom quote before the customer commits (vs. fixed-price services)
 - **3D viewer / virtual tour** — Embedded 3D preview of a floor plan
-- **Plan comparison** — Side-by-side compare two floor plans
+- **Plan comparison** — Side-by-side compare two floor plan variants
 - **Automated business approval** — Self-serve verification (e.g., verify business license, auto-approve after checks)
-- **Reviews and ratings** — Customer reviews on floor plans and professionals
-- **Services marketplace** — Transactional layer for professional services (quotes, bookings)
+- **Reviews and ratings** — Customer reviews on floor plan variants and professionals
+- **Paid placement / advertising slots** — Featured positions in shop and professionals directory (see Leadership task)
 - **Gamification / rewards** — Badges, credits for repeat customers
 - **Partnerships with suppliers** — Affiliate links to materials/fixtures
 - **Mobile app**
