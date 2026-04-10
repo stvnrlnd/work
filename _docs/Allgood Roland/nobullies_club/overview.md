@@ -22,7 +22,20 @@ The step-daughter is personally dealing with a bullying situation involving her 
 
 ## Status
 
-Some code has been started but the repo has not been pulled down locally yet.
+Repo pulled down locally to `_sites/nobullies.club/`. Core pages and design system are built. Story submission form is wired to Statamic Forms. Pledge counter uses Alpine.js + localStorage. Seed story content (4 stories) is in place.
+
+### Pages Built
+- **Home** — Hero, "What is Bullying?" cards (incl. Bullying by Adults card), Stories carousel preview, Pledge section, Resources preview, Start a Club CTA
+- **Stories** — Story wall grid + anonymous submission form
+- **About** — Founder's message, origin story
+- **Resources** — (page exists, content TBD)
+
+### What's Left
+- Moderation workflow for story submissions (CP review before stories go live)
+- Real pledge counter backed by a database/endpoint (currently localStorage only)
+- Resources page content
+- Navigation and footer polish
+- Email notifications for new story submissions
 
 ---
 

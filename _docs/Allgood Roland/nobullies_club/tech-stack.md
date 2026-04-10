@@ -16,9 +16,22 @@
 | CSS | Tailwind CSS (assumed) |
 | Bundler | Vite |
 
+## Additional Packages
+
+- Alpine.js + plugins (collapse, focus, morph, persist, precognition)
+- Embla Carousel (story carousel on homepage)
+- Statamic Peak (starter kit base)
+
+## Design System
+
+Custom Ghibli/graphic-novel theme (`ghibli.css`):
+- **Palette:** Forest green primary, sky blue, cherry blossom pink, golden yellow, cream backgrounds
+- **Fonts:** Fredoka (display), Nunito (body), Patrick Hand (comic/handwritten)
+- **Components:** `.comic-panel`, `.speech-bubble`, `.soot-sprite`, `.ghibli-btn`, `.topic-badge`, halftone patterns
+- **Animations:** float, drift (leaves), twinkle, fade-up (intersection observer), bounce-in, confetti
+
 ## Notes
 
-- Stack is confirmed as Laravel + Statamic. Specific versions and additional packages TBD when the repo is pulled down.
-- Anonymous story submissions: likely handled via a Laravel-backed form endpoint or Statamic Forms, storing submissions for moderation before display.
-- Pledge counter: simple Laravel endpoint to record and display a running count of supporters. No account required.
-- May need content moderation tooling for anonymous story submissions.
+- Anonymous story submissions use Statamic Forms (`share_story` form). Stories need CP moderation before going live.
+- Pledge counter is currently localStorage-only (baseCount hardcoded at 847). Needs a real database-backed endpoint.
+- Honeypot field (`winnie`) included in story submission form for spam protection.
