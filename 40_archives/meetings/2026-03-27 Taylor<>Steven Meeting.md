@@ -1,4 +1,4 @@
-- Search facet analytics looks good mostly
+- [[2396-search-facet-analytics-report-fixes-updates]] looks good mostly
 	- combine combinations with plan clicks & popular facet combinations
 	- add sorting, js sorting should be fine, might need to re-query data
 	- Check limits
@@ -11,6 +11,6 @@
 	- Pretty ordering facet combinations
 	- Keep category facet in category-filtered reports
 	- Put collection behind feature flag
-- Delivery delay notices
+- [[2526-customer-receipt-delivery-delay-notices]]
 	- Spoke with Joe, Megan, Brandon
 	- Try to make holiday notice more prominent, keep plan-level notices

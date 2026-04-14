@@ -1,4 +1,4 @@
-- 2655
+- [[2655-validate-email-address-value-before-posting-in-sendmodificationemailphp]]
 	- move email val outside of guard action
 - material list
 	- mat lists are stacking on a single plan when added

@@ -9,13 +9,13 @@
 ### Shawn K.
 - [[2604]]
 	- Will tackle soon before moving to next task
-- [[2535 - DEMO - New Plan Ranking Algorithm]]
+- [[2535-demo-new-plan-ranking-algorithm]]
 	- Thinking about this
-- [[2377 - AI Tool for Detecting Features]]
+- [[2377-ai-tool-for-detecting-features]]
 	- Wrapped up with interface to add plans top queue
 ### Andre R.
-- [[2503]]
-- [[200 - Order Revisions Before Releasing to Designer]]
+- [[2503-related-plans-cta-popover-to-pdp]]
+- [[200-order-revisions-before-releasing-to-designer]]
 	- Working on this now
 - Finished up with some tasks, pushed for review
 ### Craig B.
@@ -24,26 +24,26 @@
 - Back into automation and learning
 - Working in ChatGPT to learn more about codebase
 ### Steven R.
-- [[2526 - Customer Receipt Delivery Delay Notices]]
+- [[2526-customer-receipt-delivery-delay-notices]]
 	- Needs another pass, due to card wording
 	- Needs so show longest running notification, not multiple
 	- Prefer designer notice over ABHP if expires at same time
 	- Break notifications away from cart items, don't worry about how confusing that can be, prefer longest running notification
 	- Same for cart and email, only show one notification
-- [[2493]]
+- [[2493-upgrade-shipping]]
 	- Wrapping up
-- [[2574 - Sanitize Query Parameters for Save This Search]]
+- [[2574-sanitize-query-parameters-for-save-this-search]]
 	- Mostly done, just tweaking migration script
-- [[2396 - Search Facet Analytics Report Fixes & Updates]]
+- [[2396-search-facet-analytics-report-fixes-updates]]
 ### Brian M.
-- [[2075 - CSS Framework]]
+- [[2075-css-framework]]
 - Been a weird week/day
 ### Taylor S.
-- [[2580]]
-- [[2596]]
-- [[2592]]
-- [[2578 - Add Front Tag for Georgia orders]]
-- [[2599]]
+- [[2580-zero-downtime-high-availability-plan]]
+- [[2596-db-performance-helper]]
+- [[2592-show-republished-plans]]
+- [[2578-add-front-tag-for-local-orders]]
+- [[2599-zoom-fathom-for-brian]]
 ## Rock Review
 ---
 -

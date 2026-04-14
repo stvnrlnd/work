@@ -7,14 +7,14 @@
 ## Since Last We Met
 ---
 ### Shawn K.
-- [[2572 - BUG - Promotion Level not showing]]
-- [[2535 - DEMO - New Plan Ranking Algorithm]]
+- [[2572-bug-promotion-level-not-showing]]
+- [[2535-demo-new-plan-ranking-algorithm]]
 	- Looking over code for cron task
-- [[2377 - AI Tool for Detecting Features]]
+- [[2377-ai-tool-for-detecting-features]]
 	- Moved to need help/blocked
 ### Andre R.
-- [[2343 - Plan Media Viewer - Milestone 3]]
-- [[2569 - PDP Above-the-Fold Simplification (Gallery + Mobile UX Update)]]
+- [[2343-plan-media-viewer-milestone-3]]
+- [[2569-pdp-above-the-fold-simplification-gallery-mobile-ux-update]]
 	- Working on this, probably done tomorrow
 ### Craig B.
 - Starting preliminary work for accessibility audit
@@ -22,23 +22,23 @@
 	- Looking to dev tasks, looking for missing key accessibility features
 	- Is 1-day task
 ### Steven R.
-- [[2571 - State Page Landing Page Parameter for Paid Ads]]
+- [[2571-state-page-landing-page-parameter-for-paid-ads]]
 	- Moved to review
-- [[2449 - Mod quote request save feature]]
+- [[2449-mod-quote-request-save-feature]]
 	- Resolving merge conflicts, reviewing/testing, writing up
-- 2528
+- [[2526-customer-receipt-delivery-delay-notices]]
 	- Brian experienced odd text overlapping bug, will investigate
 ### Brian M.
-- [[2075 - CSS Framework]]
-- [[2359 - Bulk Image Uploader Engineering Plan]]
+- [[2075-css-framework]]
+- [[2539]]
 	- Pushed over engineering plan
 	- Used Claude to test engineering plan, and did pretty much what was needed
 - Reviewing tasks
 ### Taylor S.
-- 2592
-- [[2578 - Add Front Tag for Georgia orders]]
-- 2580
-- 2596
+- [[2592-show-republished-plans]]
+- [[2578-add-front-tag-for-local-orders]]
+- [[2580-zero-downtime-high-availability-plan]]
+- [[2596-db-performance-helper]]
 - Deploying tasks, regular stuff, slack requests, no major things to report
 ## Rock Review
 ---

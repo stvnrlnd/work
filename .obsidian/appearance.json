@@ -2,5 +2,6 @@
   "cssTheme": "Omarchy",
   "enabledCssSnippets": [
     "hidden-properties"
-  ]
+  ],
+  "showRibbon": true
 }

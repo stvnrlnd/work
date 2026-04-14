@@ -7,32 +7,32 @@
 ## Since Last We Met
 ---
 ### Shawn K.
-- [[2582 - Elastic Server for Analytics]]
+- [[2582-elastic-server-for-analytics]]
 - Wrapped up new plan ranking algo
 - 
 ### Andre R.
-- [[2205 - Add Notes section in the back end for Build Photo Albums]]
-- [[2503]]
-- [[200 - Order Revisions Before Releasing to Designer]]
+- [[2205-add-notes-section-in-the-back-end-for-build-photo-albums]]
+- [[2503-related-plans-cta-popover-to-pdp]]
+- [[200-order-revisions-before-releasing-to-designer]]
 	- Moved to review
 ### Craig B.
 - Doing mix of things
 - Looking at assigned tasks to see if can do anything, build test plan
 - A little automated tests work
 ### Steven R.
-- [[2493]] Moved to review
-- [[2526 - Customer Receipt Delivery Delay Notices]] Moved to review
-- [[2574 - Sanitize Query Parameters for Save This Search]]
+- [[2493-upgrade-shipping]] Moved to review
+- [[2526-customer-receipt-delivery-delay-notices]] Moved to review
+- [[2574-sanitize-query-parameters-for-save-this-search]]
 	- Trying to wrap up today
-- [[2396 - Search Facet Analytics Report Fixes & Updates]]
+- [[2396-search-facet-analytics-report-fixes-updates]]
 ### Brian M.
-- [[2075 - CSS Framework]]
+- [[2075-css-framework]]
 ### Taylor S.
-- [[2580]]
-- [[2596]]
-- [[2592]]
-- [[2578 - Add Front Tag for Georgia orders]]
-- [[2599]]
+- [[2580-zero-downtime-high-availability-plan]]
+- [[2596-db-performance-helper]]
+- [[2592-show-republished-plans]]
+- [[2578-add-front-tag-for-local-orders]]
+- [[2599-zoom-fathom-for-brian]]
 ## Rock Review
 ---
 -

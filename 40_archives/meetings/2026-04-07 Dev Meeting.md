@@ -9,7 +9,7 @@
 ### Shawn K.
 - No blockers
 - Got [[2715-logrotate-config]]
-- Got[[2716-fail2ban-config]]
+- Got [[2716-fail2ban-config]]
 ### Andre R.
 - No blockers
 - Got [[2753-bug-floor-plan-images-not-loading-in-media-viewer]], might have fixed
