@@ -1,0 +1,25 @@
+- [[2396-search-facet-analytics-report-fixes-updates]]
+	- Previous discussion about elastic optimized for inserts instead of updates, probably not issue at current scale
+	- Is possible to optimize given constraints?
+	- Retention policy
+		- year's worth of data would be amazing
+		- 6 mos might be okay
+		- 3 mos might be okay
+	- Every facet + value needs to be recorded
+	- Record facets at time of plan click
+	- No limit to number of facets to display
+	- We don't need a new line for each sqft value
+	- Top 25 combinations
+- [[2574-sanitize-query-parameters-for-save-this-search]]
+	- Make it simpler
+- [[2493-upgrade-shipping]]
+	- Notifications on order admin pages (www/edit/orders/orders_edit.php:646-661)
+		- Code was added that creates "order_changes" entries with warning messages when there's a shipping/item mismatch. These appear as notifications on the order admin pages.
+		- Cart causing shipping to load incorrectly (www/inc/functions.php:686-698)
+			- The autoSetShippingForOrder function only processes orders with price_description = 'Upgrade'
+			- At lines 696-698, if no "Upgrade" items exist, the function returns early and does nothing
+			- This breaks shipping determination for regular (non-upgrade) orders
+		- Prefer non-Fulfilled items - Logic is too narrow
+			- The function filters for price_description = 'Upgrade' (:686-692, 700-707)
+			- It should instead look at ALL non-Fulfilled items (could be blank or 'Upgrade')
+			- When multiple packages exist, it should prefer items where price_description != 'Fulfilled'

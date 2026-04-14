@@ -1,0 +1,16 @@
+- Search facet analytics looks good mostly
+	- combine combinations with plan clicks & popular facet combinations
+	- add sorting, js sorting should be fine, might need to re-query data
+	- Check limits
+	- Remove "All" category filter
+	- Increase few combinations to 15, change title to "limited" instead of "few"
+	- report is not built on rollup data, cron rolls up to new table -- may not need rollup at all, should investigate if reports use rollup data
+		- Maybe create dev duplicate for rollup, non-dev non-rollup
+	- Maybe store category id in non-json column
+		- later may want to extract all facets to individual columns for easier/more performant filtering
+	- Pretty ordering facet combinations
+	- Keep category facet in category-filtered reports
+	- Put collection behind feature flag
+- Delivery delay notices
+	- Spoke with Joe, Megan, Brandon
+	- Try to make holiday notice more prominent, keep plan-level notices

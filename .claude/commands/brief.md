@@ -9,9 +9,17 @@ Deliver a morning brief and set up today's daily note.
 
 4. Read the main project file (`10_projects/[project].md`) for each project listed as active in context.md. Skim any relevant changelog entries if you need a sense of recent activity.
 
-5. Deliver the brief in this format:
-   - **In flight** — what's actively being built or decided across projects
-   - **Blocked / needs a decision** — anything stalled or waiting on input
-   - **Top 3 priorities** — your recommendation for what Steven should focus on today, with a one-line reason for each
+5. Read ABHP tasks from `40_archives/tasks/`. Surface:
+   - Any tasks with `status: in-progress` or `status: in-review` (highlight these first)
+   - Any tasks with `status: up-next` (planned for soon)
+   - Any tasks with a `due` date (especially those due soon)
+   - Any tasks with a `due` date (especially those due soon)
+   - A general sense of what's in the backlog (count by task_type, notable items)
 
-6. Write a condensed version of the brief (2–4 sentences, no headers) into the `## Brief` section of today's daily note, replacing the placeholder text.
+6. Deliver the brief in this format:
+   - **ABHP (day job)** — active/in-progress tasks, anything due soon, notable backlog items
+   - **Segment Holdings** — what's actively being built or decided across projects
+   - **Blocked / needs a decision** — anything stalled or waiting on input (across both)
+   - **Top 3 priorities** — your recommendation for what Steven should focus on today, balancing ABHP obligations with Segment Holdings progress, with a one-line reason for each
+
+7. Write the full brief (all sections, same detail as delivered in chat) into the `## Brief` section of today's daily note, replacing the placeholder text. Use wiki links (`[[filename]]`) when referencing projects, areas, or other linkable notes.

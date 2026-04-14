@@ -49,6 +49,7 @@ Create a daily note at `40_archives/daily/YYYY-MM-DD.md` when starting a session
 
 - Use YAML frontmatter on all notes (title, type, created at minimum).
 - Use wiki links `[[filename]]` for internal links — not markdown relative links.
+- **Always link** projects, areas, tasks, and any other referenceable notes when mentioning them in any vault file or daily note. This applies everywhere: briefs, logs, changelogs, meeting notes, inbox captures, and system files.
 - Keep `type` consistent: `project`, `area`, `resource`, `system`, `daily`.
 
 ## Dart (Project Management)
@@ -79,7 +80,7 @@ Dart is the project management tool. Access via MCP tools (`mcp__Dart__*`).
 ### Task Types & Statuses
 
 - **Types:** Task, Bug, Feature, Experimental, Maintenance, Security
-- **Statuses:** Ready, In Progress, On Hold, Done, Left
+- **Statuses:** Ready, Up Next, In Progress, In Review, On Hold, Done, Left
 
 ### Assignees
 

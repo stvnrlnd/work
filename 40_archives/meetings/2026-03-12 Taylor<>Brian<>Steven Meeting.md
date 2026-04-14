@@ -1,0 +1,7 @@
+- 2655
+	- move email val outside of guard action
+- material list
+	- mat lists are stacking on a single plan when added
+	- Brian made change to hide upsell when is mod in cart
+	- Should have a rule in cart that should not be possible to add more than one mat list to cart item
+	- Some designers don't allow mat list sales

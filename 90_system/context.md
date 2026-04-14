@@ -89,10 +89,11 @@ Random ideas and fleeting notes land in `00_inbox/`. When a brainstorm produces 
 ## Skills
 
 - `/brief` — morning brief command. Reads active project context, delivers a brief in chat, writes a summary to the `## Brief` section of today's daily note. Defined at `.claude/commands/brief.md`.
+- `/add-abhp-attendees` — adds ABHP fixed attendee group to a meeting note (frontmatter + Since Last We Met + Ratings sections). Defined at `.claude/commands/add-abhp-attendees.md`.
 
 ## Obsidian Setup
 
-- **Community plugins:** none installed
-- **Template syntax:** core Templates plugin only — use `{{date:FORMAT}}`, not Templater syntax
-- **Daily notes plugin:** configured — folder `40_archives/daily`, template `30_resources/templates/daily-note`
+- **Community plugins:** Templater
+- **Daily notes plugin:** configured — folder `40_archives/daily`, template `30_resources/templates/daily-note` (uses core Templates syntax)
+- **Meeting note template:** `30_resources/templates/meeting-note.md` — uses Templater; prompts for area and auto-fills attendees
 - **Templates plugin folder:** `30_resources/templates`

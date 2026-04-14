@@ -1,0 +1,2 @@
+Taylor asked if I could joing a call with himself and Andre to discuss [[2757-investigate-mod-request-submission-errors]] since I submitted work for the task as well as Andre. The task was in Andre's column, but Taylor has tagged my in a Slack conversation about it.
+The conversation was brief, Taylor apologized for the confusion and expressed appreciation for the effort. He also asked if I was able to reproduce the issue, which I was not able to do. After reviewing the code, it appears that Andre and I had both come to the same conclusion.

@@ -1,0 +1,7 @@
+- Gearing up for the tradeshow in Orlando
+- Wants input from developers on what improvements can make to card descriptions, what is task looking for
+	- Gives the problem, not a solution.
+		- Things sort of tried have put more responsibility on devs, not working well.
+	- Points: budget or appetite?
+	- Meeting updates card, devs need more context
+		- pre-task-select meeting

@@ -70,18 +70,50 @@ Daily notes live in `40_archives/daily/YYYY-MM-DD.md`. The Obsidian core Daily N
 
 ### Meeting Notes
 
-Meeting notes live in `40_archives/meetings/`. Name them `YYYY-MM-DD — Meeting Title.md` so they sort chronologically.
+Meeting notes live in `40_archives/meetings/`. The Templater template handles naming automatically: `YYYY-MM-DD Meeting Title.md`. The `title` frontmatter holds just the meeting name; the date prefix comes from `created`.
+
+### Tasks
+
+Local task files live in `40_archives/tasks/`. Use the template at `30_resources/templates/task.md`.
+
+**Frontmatter fields:**
+
+| Field | Required | Notes |
+|---|---|---|
+| `title` | yes | Human-readable task name |
+| `type` | yes | Always `task` |
+| `task_type` | yes | `task` \| `bug` \| `feature` \| `experimental` \| `maintenance` \| `security` |
+| `source` | yes | `abhp` or `dart` |
+| `project` | yes | `abhp` or a Segment Holdings project slug (e.g. `homestead.plus`) |
+| `status` | yes | `ready` \| `up-next` \| `in-progress` \| `in-review` \| `on-hold` \| `done` \| `left` |
+| `created` | yes | When the task was made ready for development (not necessarily when it was created upstream) |
+| `updated` | yes | Last time the task file was meaningfully changed |
+| `due` | ABHP only | Due date, if set |
+| `trello_id` | ABHP only | Numeric Trello card ID; also used as filename prefix (`2343 - Title.md`) |
+| `dart_id` | Dart only | Dart task ID for cross-reference |
+
+**Naming conventions:**
+
+- ABHP tasks: `{trello_id} - {Title}.md` (e.g. `2343 - Plan Media Viewer - Milestone 3.md`)
+- Dart-mirrored tasks: `{Title}.md` (or `{dart_id} - {Title}.md` if ID is known)
+
+**Important rules:**
+
+- ABHP tasks are **never** created in Dart. They exist only as local reference files.
+- Dart-mirrored tasks are created in Dart first; the local file is a copy for vault context.
+- `created` on an ABHP task represents when it was made ready for development, not when it was added to Trello.
 
 ### Templates
 
-Templates live in `30_resources/templates/`. **No community plugins are installed** — templates use Obsidian core Templates plugin syntax only:
-- `{{date:YYYY-MM-DD}}` — date with format
-- `{{time}}` — current time
-- `{{title}}` — note title
+Templates live in `30_resources/templates/`.
 
-Do NOT use Templater syntax (e.g. `<% tp.date.now() %>`) — that plugin is not installed.
+**Plugins installed:**
+- **Core Templates** — used for simple templates (daily note). Syntax: `{{date:YYYY-MM-DD}}`, `{{title}}`, `{{time}}`
+- **Templater** — used for templates requiring logic or prompts (meeting note). Syntax: `<% tp.date.now("FORMAT") %>`, `<%* /* script */ %>`
 
-The Templates plugin folder location needs to be set in Obsidian: Settings → Templates → Template folder location → `30_resources/templates`.
+**Templater settings:** Settings → Templater → Template folder → `30_resources/templates`
+
+To use a Templater template, open the command palette and run **Templater: Open Insert Template Modal**, or configure a hotkey for it.
 
 ### Skills (`/brief`)
 
@@ -109,4 +141,4 @@ Dart is the external project management tool. Claude accesses it via MCP (`mcp__
 ### Task Types & Statuses
 
 - **Types:** Task, Bug, Feature, Experimental, Maintenance, Security
-- **Statuses:** Ready, In Progress, On Hold, Done, Left
+- **Statuses:** Ready, Up Next, In Progress, In Review, On Hold, Done, Left

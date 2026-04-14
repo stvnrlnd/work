@@ -1,0 +1,8 @@
+- [[2310-user-marketing-attribution-history]]
+	- Doing 2 things with revision
+		- Storing anon user client_id in cookie with no expire
+		- Store user auth, assoc with device
+	- Log every user sign-in
+	- Store marketing attr as seen, against client_id
+	- Any time admin is logged in, bypass all tracking
+	- Don't immediately want to undo current data on users table
