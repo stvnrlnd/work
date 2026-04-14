@@ -1,55 +1,80 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code when working in this repository.
 
 ## About This Workspace
 
-This is the admin layer for Steven Roland's work as CEO and sole developer of Segment Holdings. It serves as a shared knowledge base between Steven and Claude across multiple businesses and projects.
+This is Steven Roland's personal Obsidian vault — a shared knowledge base and workspace between Steven and Claude. It covers multiple businesses and projects under [[20_areas/segment-holdings|Segment Holdings LLC]].
 
-- **`_docs/`** — High-level thinking, project overviews, and business plans. Organized into group folders by entity or client, with a subfolder per project. Start here for context on any project.
-- **`_sites/`** — Web project code. Each site is tracked in its own git repository and has its own `CLAUDE.md` with project-specific technical guidance.
+Steven is both the CEO and sole developer across all projects. He is a PHP/Laravel developer based in Pensacola, FL. He also works a day job at America's Best House Plans (ABHP).
 
-The root directory is an Obsidian vault (`.obsidian/`), with `_docs/` as its organized content.
+## Vault Structure
+
+```
+00_inbox/       — Fleeting ideas and captures. Add ideas here during brainstorming.
+10_projects/    — One subfolder per project. Start here for any project context.
+20_areas/       — Ongoing responsibilities: groups, subsidiaries, company overview.
+30_resources/   — Reference material shared across projects.
+40_archives/    — Cold storage: completed/abandoned work; includes daily notes and meetings.
+  daily/        — Daily notes (YYYY-MM-DD.md).
+  meetings/     — Meeting notes.
+90_system/      — Claude's context and system files. See context.md and vault-guide.md.
+```
+
+For full vault conventions (frontmatter format, linking style, Dart structure), see [[90_system/vault-guide]].
+
+For background on Steven, the company, and active project status, see [[90_system/context]].
+
+## Code Location
+
+Project code lives outside this vault: `~/Work/_code/[project]/`. Each has its own git repo and `CLAUDE.md` with technical guidance.
 
 ## How We Work Together
 
-Steven is both the CEO and the sole developer across all projects. This workspace exists so that Claude has the context needed to assist across those projects effectively — from high-level strategy to implementation.
+### Starting work on a project
 
-When starting work on a project:
-- Look in `_docs/[Group]/[project]/` for product context, business goals, and decisions
-- Look in `_sites/[project]/CLAUDE.md` for technical guidance
+1. Read `10_projects/[project]/overview.md` for product context, goals, and current status.
+2. Check `~/Work/_code/[project]/CLAUDE.md` for technical guidance.
+3. Check or create `10_projects/[project]/changelog.md` — log all work done (code, docs, decisions).
 
-When creating new project documentation, place it in the appropriate `_docs/[Group]/[project]/` folder.
+### Brainstorming and ideas
 
-When starting or continuing work on any project, check whether a `changelog.md` exists in its `_docs/` folder. If it doesn't, create one. As work is done — whether code, documentation, or decisions — add a dated entry to the changelog. Admin and documentation work counts and should be recorded.
+If an idea comes up during a brainstorm, create a note in `00_inbox/` immediately. Don't wait.
+
+### Daily notes
+
+Create a daily note at `40_archives/daily/YYYY-MM-DD.md` when starting a session if one doesn't exist. Log what was done at the end of the session. Use these to provide a morning brief when asked.
+
+### Obsidian conventions
+
+- Use YAML frontmatter on all notes (title, type, created at minimum).
+- Use wiki links `[[filename]]` for internal links — not markdown relative links.
+- Keep `type` consistent: `project`, `area`, `resource`, `system`, `daily`.
 
 ## Dart (Project Management)
 
-Dart is the project management tool for Segment Holdings. Access it via MCP tools (`mcp__Dart__*`).
+Dart is the project management tool. Access via MCP tools (`mcp__Dart__*`).
 
 ### Spaces & Dartboards
 
-Tasks are organized into team spaces, each with a dartboard:
-
 | Space | Dartboard | Purpose |
 |---|---|---|
-| Leadership | Leadership/Tasks | High-level ideas and directional tasks — Steven's starting point |
-| Engineering | Engineering/Active, /Next, /Sprint 1, /Sprint 2, /Backlog | Dev work |
+| Leadership | Leadership/Tasks | High-level ideas and directional tasks |
+| Engineering | Engineering/Active, /Next, /Backlog, and numbered sprint boards | Dev work |
 | Product | Product/Tasks | Product decisions and specs |
 | Design | Design/Tasks | Design work |
 | Sales | Sales/Tasks | Sales activity |
 
 ### Workflow
 
-Steven's typical flow:
-1. A new idea or initiative starts as a task in **Leadership/Tasks** — these are often directional/exploratory and may not yet have a project tag.
-2. Leadership tasks may spin off subtasks assigned to Engineering, Product, Design, or Sales dartboards.
-3. Tasks in team dartboards (non-Leadership) should have a **project** tag applied to link them to a specific project.
+1. New ideas/initiatives start as tasks in **Leadership/Tasks**.
+2. Leadership tasks may spin off subtasks in Engineering, Product, Design, or Sales dartboards.
+3. Non-Leadership tasks should have a **project** tag applied.
 
 ### Custom Properties
 
-- **`project`** (multiselect) — Links a task to one or more projects. Current values include: `sendfeed.to`, `segment.holdings`, `firstcitysoftware.com`, `homestead.plus`, `openfaith.world`, `stevenroland.com`, `allgood-roland.org`, `montanna.pro`, `theirvoice.blog`, `theoandchar.com`, and others. Apply this to all non-Leadership tasks.
-- **`importance`** (select) — `Critical`, `Priority`, `Pickup`, `Optional`.
+- **`project`** (multiselect) — `sendfeed.to`, `segment.holdings`, `homestead.plus`, `tokidoki.pro`, `nobullies.club`, `openfaith.world`, `stevenroland.com`, `allgood-roland.org`, `theirvoice.blog`, `theoandchar.com`
+- **`importance`** (select) — `Critical`, `Priority`, `Pickup`, `Optional`
 
 ### Task Types & Statuses
 
@@ -58,6 +83,6 @@ Steven's typical flow:
 
 ### Assignees
 
-- Steven Roland (`steven@segment.team`) — CEO and sole developer; default assignee for most tasks
+- Steven Roland (`steven@segment.team`) — default assignee
 - Montanna Allgood (`montanna@segment.team`)
 - Dart AI
