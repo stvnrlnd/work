@@ -72,36 +72,33 @@ Daily notes live in `40_archives/daily/YYYY-MM-DD.md`. The Obsidian core Daily N
 
 Meeting notes live in `40_archives/meetings/`. The Templater template handles naming automatically: `YYYY-MM-DD Meeting Title.md`. The `title` frontmatter holds just the meeting name; the date prefix comes from `created`.
 
-### Tasks
+### Work Items
 
-Local task files live in `40_archives/tasks/`. Use the template at `30_resources/templates/task.md`.
+Work item files live in `40_archives/work_items/`. Use the template at `30_resources/templates/work-item.md`.
 
 **Frontmatter fields:**
 
 | Field | Required | Notes |
 |---|---|---|
-| `title` | yes | Human-readable task name |
-| `type` | yes | Always `task` |
-| `task_type` | yes | `task` \| `bug` \| `feature` \| `experimental` \| `maintenance` \| `security` |
-| `source` | yes | `abhp` or `dart` |
-| `project` | yes | `abhp` or a Segment Holdings project slug (e.g. `homestead.plus`) |
+| `title` | yes | Human-readable work item name |
+| `type` | yes | Always `work-item` (hidden in properties view) |
+| `item_type` | yes | `task` \| `bug` \| `feature` \| `experimental` \| `maintenance` \| `security` |
+| `project` | yes | `houseplans.net`, `segment-holdings`, or a specific project slug (e.g. `homestead.plus`) |
 | `status` | yes | `ready` \| `up-next` \| `in-progress` \| `in-review` \| `on-hold` \| `done` \| `left` |
-| `created` | yes | When the task was made ready for development (not necessarily when it was created upstream) |
-| `updated` | yes | Last time the task file was meaningfully changed |
-| `due` | ABHP only | Due date, if set |
-| `trello_id` | ABHP only | Numeric Trello card ID; also used as filename prefix (`2343 - Title.md`) |
-| `dart_id` | Dart only | Dart task ID for cross-reference |
+| `created` | yes | When the work item was made ready for development |
+| `updated` | no | Last time the file was meaningfully changed |
+| `due` | no | Due date, if set |
+| `url` | no | External link (e.g. Trello card, Dart task) |
 
 **Naming conventions:**
 
-- ABHP tasks: `{trello_id} - {Title}.md` (e.g. `2343 - Plan Media Viewer - Milestone 3.md`)
-- Dart-mirrored tasks: `{Title}.md` (or `{dart_id} - {Title}.md` if ID is known)
+- ABHP work items: `{trello_slug}.md` (e.g. `2695-default-elevation-check.md`)
+- Segment Holdings / personal: `{Title}.md`
 
 **Important rules:**
 
-- ABHP tasks are **never** created in Dart. They exist only as local reference files.
-- Dart-mirrored tasks are created in Dart first; the local file is a copy for vault context.
-- `created` on an ABHP task represents when it was made ready for development, not when it was added to Trello.
+- ABHP work items are **never** created in Dart. They exist only as local reference files.
+- `created` on an ABHP work item represents when it was made ready for development, not when it was added to Trello.
 
 ### Templates
 

@@ -32,7 +32,10 @@ attendees:
 ### Craig B.
 -
 ### Steven R.
--
+- [[2350-add-toggle-to-switch-from-elevation-view-to-floorplan-view]]
+	- Wrapping up
+- [[2733-log-all-admin-queries]]
+- [[2695-default-elevation-check]]
 ### Brian M.
 -
 ### Taylor S.

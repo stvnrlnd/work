@@ -1,3 +1,6 @@
 {
-  "cssTheme": "Omarchy"
+  "cssTheme": "Omarchy",
+  "enabledCssSnippets": [
+    "hidden-properties"
+  ]
 }

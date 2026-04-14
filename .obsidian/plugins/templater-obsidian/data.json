@@ -17,6 +17,10 @@
     {
       "folder": "40_archives/meetings",
       "template": "30_resources/templates/meeting-note.md"
+    },
+    {
+      "folder": "40_archives/work_items",
+      "template": "30_resources/templates/work-item.md"
     }
   ],
   "enable_file_templates": false,

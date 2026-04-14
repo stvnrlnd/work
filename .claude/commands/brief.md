@@ -9,12 +9,11 @@ Deliver a morning brief and set up today's daily note.
 
 4. Read the main project file (`10_projects/[project].md`) for each project listed as active in context.md. Skim any relevant changelog entries if you need a sense of recent activity.
 
-5. Read ABHP tasks from `40_archives/tasks/`. Surface:
-   - Any tasks with `status: in-progress` or `status: in-review` (highlight these first)
-   - Any tasks with `status: up-next` (planned for soon)
-   - Any tasks with a `due` date (especially those due soon)
-   - Any tasks with a `due` date (especially those due soon)
-   - A general sense of what's in the backlog (count by task_type, notable items)
+5. Read ABHP work items from `40_archives/work_items/`. Surface:
+   - Any work items with `status: in-progress` or `status: in-review` (highlight these first)
+   - Any work items with `status: up-next` (planned for soon)
+   - Any work items with a `due` date (especially those due soon)
+   - A general sense of what's in the backlog (count by item_type, notable items)
 
 6. Deliver the brief in this format:
    - **ABHP (day job)** — active/in-progress tasks, anything due soon, notable backlog items
