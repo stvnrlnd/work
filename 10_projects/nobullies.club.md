@@ -40,14 +40,18 @@ Repo pulled down locally to `~/Work/_code/nobullies.club/`. Core pages and desig
 - **Home** — Hero, "What is Bullying?" cards (incl. Bullying by Adults card), Stories carousel preview, Pledge section, Resources preview, Start a Club CTA
 - **Stories** — Story wall grid + anonymous submission form
 - **About** — Founder's message, origin story
-- **Resources** — (page exists, content TBD)
+- **Resources** — Books, helpful websites, and action tips. Content is hardcoded in `resources.antlers.html`.
 
 ### What's Left
-- Moderation workflow for story submissions (CP review before stories go live)
-- Real pledge counter backed by a database/endpoint (currently localStorage only)
-- Resources page content
 - Navigation and footer polish
 - Email notifications for new story submissions
+
+### Done
+- Resources page — full content hardcoded in template
+- Story submission migration action — CP action in `app/Actions/MigrateStorySubmission.php` migrates approved submissions to stories collection (unpublished)
+- Pledge counter — server-backed via `/api/pledge-count` + `/api/pledge` routes; counter stored in `storage/app/pledge_count`; localStorage still gates duplicate pledges
+- Footer whitespace — gradient at bottom of "Start a Club" section blends into footer treeline
+- Git ignore — new story entries and pledge counter file excluded from git; seed stories remain tracked
 
 ---
 

@@ -32,6 +32,6 @@ Custom Ghibli/graphic-novel theme (`ghibli.css`):
 
 ## Notes
 
-- Anonymous story submissions use Statamic Forms (`share_story` form). Stories need CP moderation before going live.
-- Pledge counter is currently localStorage-only (baseCount hardcoded at 847). Needs a real database-backed endpoint.
+- Anonymous story submissions use Statamic Forms (`share_story` form). Stories are moderated via a CP action (`app/Actions/MigrateStorySubmission.php`) that migrates approved submissions to the stories collection as unpublished entries.
+- Pledge counter is server-backed: `GET /api/pledge-count` + `POST /api/pledge` (routes in `routes/web.php`). Counter stored in `storage/app/pledge_count` (flat file, not in git). Rate-limited to 1 pledge/IP/day. localStorage gates the UI so users can only pledge once.
 - Honeypot field (`winnie`) included in story submission form for spam protection.
