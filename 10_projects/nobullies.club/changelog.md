@@ -1,5 +1,12 @@
 # nobullies.club — Changelog
 
+## 2026-04-15 (Decisions)
+
+- Nav/footer polish deemed not needed — shipped as-is. Closed out.
+- Remaining post-launch task: email notifications for new story submissions.
+
+---
+
 ## 2026-04-14 (Code + Docs)
 
 - Created `app/Actions/MigrateStorySubmission.php` — CP action that appears on `share_story` form submissions; migrates selected submissions into the stories collection as unpublished entries (auto-discovered by Statamic from `app/Actions/`)

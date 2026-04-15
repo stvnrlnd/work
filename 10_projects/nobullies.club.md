@@ -2,7 +2,7 @@
 title: nobullies.club
 type: project
 area: "[[allgood-roland]]"
-status: in-development
+status: active
 tags:
   - passion-project
   - community
@@ -11,6 +11,14 @@ created: 2026-04-13
 ---
 
 # nobullies.club — Overview
+
+## Domains
+
+The site is **The Anti-Bully Club** and runs on three domains, all serving the same website:
+
+- `nobullies.club` (primary)
+- `antibullyclub.org`
+- `antibullyclub.com`
 
 ## What It Is
 
@@ -43,7 +51,6 @@ Repo pulled down locally to `~/Work/_code/nobullies.club/`. Core pages and desig
 - **Resources** — Books, helpful websites, and action tips. Content is hardcoded in `resources.antlers.html`.
 
 ### What's Left
-- Navigation and footer polish
 - Email notifications for new story submissions
 
 ### Done

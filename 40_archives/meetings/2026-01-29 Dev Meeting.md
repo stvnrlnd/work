@@ -30,7 +30,7 @@
 	- Brian experienced odd text overlapping bug, will investigate
 ### Brian M.
 - [[2075-css-framework]]
-- [[2539]]
+- [[2539-front-header-rules-stopped-working]]
 	- Pushed over engineering plan
 	- Used Claude to test engineering plan, and did pretty much what was needed
 - Reviewing tasks

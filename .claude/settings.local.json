@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(ls /Users/stvnrlnd/Work/_memory/10_projects/sendfeed.to*)",
+      "Bash(ls /Users/stvnrlnd/Work/_memory/10_projects/homestead.plus*)",
+      "Bash(ls /Users/stvnrlnd/Work/_memory/10_projects/nobullies.club*)",
+      "Bash(ls /Users/stvnrlnd/Work/_memory/10_projects/hirethedude.com*)",
+      "Bash(ls /Users/stvnrlnd/Work/_memory/10_projects/tokidoki.pro*)"
+    ]
+  }
+}
