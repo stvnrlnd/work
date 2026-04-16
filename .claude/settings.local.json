@@ -17,7 +17,19 @@
       "Bash(npm run *)",
       "Bash(ls /home/stvnrlnd/Work/_code/swamp.team/vendor/livewire/flux/stubs/resources/views/flux/tab*)",
       "Bash(./vendor/bin/sail down *)",
-      "Bash(./vendor/bin/sail up *)"
+      "Bash(./vendor/bin/sail up *)",
+      "Bash(php artisan *)",
+      "Bash(php -r \"require 'vendor/autoload.php'; echo 'OK';\")",
+      "Bash(ls /home/stvnrlnd/Work/_code/nvst.chat/docker-compose*)",
+      "Bash(ls /home/stvnrlnd/Work/_code/nvst.chat/*.yml)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:dev.to)",
+      "Bash(vendor/bin/pint --dirty --format agent app/Services/AlpacaService.php)",
+      "Bash(vendor/bin/pint *)",
+      "Bash(ls /home/stvnrlnd/Work/_code/nvst.chat/database/*.sqlite)",
+      "Bash(sudo chmod *)",
+      "Bash(chmod -R o+w /home/stvnrlnd/Work/_code/nvst.chat/app/Ai/)"
     ]
   }
 }
