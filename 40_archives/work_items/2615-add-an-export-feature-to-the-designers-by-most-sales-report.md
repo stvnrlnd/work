@@ -11,3 +11,9 @@ url:
 ---
 
 # Add an Export Feature to the Designers by Most Sales Report
+
+Add the ability to export the designers by most sales report. Potentially the ability to export one section of data if possible, and/or the entire report
+
+Export by section
+
+Bonus: export all sections in one csv, in separate csvs.
