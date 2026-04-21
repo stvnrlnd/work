@@ -32,6 +32,7 @@ status: ready
 created: <% dateStr %>
 updated:
 due:
+assignee:
 url:
 ---
 

@@ -89,7 +89,6 @@ Random ideas and fleeting notes land in `00_inbox/`. When a brainstorm produces 
 
 ## Skills
 
-- `/brief` — morning brief command. Reads active project context, delivers a brief in chat, writes a summary to the `## Brief` section of today's daily note. Defined at `.claude/commands/brief.md`.
 - `/add-abhp-attendees` — adds ABHP fixed attendee group to a meeting note (frontmatter + Since Last We Met + Ratings sections). Defined at `.claude/commands/add-abhp-attendees.md`.
 
 ## Obsidian Setup
